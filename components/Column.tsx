@@ -34,7 +34,10 @@ function Column({id, todos, index}: Props) {
                                 snapshot.isDraggingOver ? "bg-green-200" : "bg-white/50"
                             }`}
                         >
-                            <h2>{idToColumnText[id]}</h2>
+                            <h2>{idToColumnText[id]}
+                            
+                            <span className="text-gray-500 bg-gray-200 rounded-full px-2 py-2 text-sm">{todos.length}</span>
+                            </h2>
                         </div>
                         )}
                     </Droppable>
