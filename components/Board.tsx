@@ -15,7 +15,16 @@ function Board() {
   }, [getBoard])
 
   const handleOnDragEnd = (result: DropResult) => {
+    const { destination, source, type } = result;
 
+    if (!destination) return;
+
+    if (type==="column") {
+      const entries = Array.from(board.columns.entries());
+      const [removed] = entries.splice(source.index, 1);
+      entries.splice(destination.index, 0, removed);
+      const rearrangedColumns = new Map(entries);
+    }
   };
 
   console.log(board)
