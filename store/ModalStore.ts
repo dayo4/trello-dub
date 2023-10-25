@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 interface ModalState {
   isOpen: boolean;
-  openModal: () => void;
+  openModal: () => void; 
   closeModal: () => void;
 }
 
